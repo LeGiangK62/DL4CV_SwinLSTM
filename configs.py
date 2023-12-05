@@ -16,9 +16,8 @@ def get_args():
     parser.add_argument('--input_size', default=(64, 64), help='Input resolution')
     parser.add_argument('--step_length', default=0.1, type=float)
     parser.add_argument('--num_objects', default=[2], type=int)
-    parser.add_argument('--train_samples', default=[0, 10000], type=list, help='Number of samples in training set')
-    parser.add_argument('--valid_samples', default=[10000, 13000], type=list, help='Number of samples in validation '
-                                                                                   'set')
+    parser.add_argument('--train_samples', default=[0, 10000], type=int, nargs="*", help='Number of samples in training set')
+    parser.add_argument('--valid_samples', default=[10000, 13000], type=int, nargs="*",help='Number of samples in validation set')
     parser.add_argument('--train_data_dir', default='./data/train-images-idx3-ubyte.gz')
     parser.add_argument('--test_data_dir', default='./data/mnist_test_seq.npy')
 
